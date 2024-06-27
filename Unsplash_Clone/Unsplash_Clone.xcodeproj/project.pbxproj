@@ -12,6 +12,11 @@
 		274ED3432C2D592800EFF066 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED3422C2D592800EFF066 /* ViewController.swift */; };
 		274ED3482C2D592A00EFF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274ED3472C2D592A00EFF066 /* Assets.xcassets */; };
 		274ED34B2C2D592A00EFF066 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 274ED34A2C2D592A00EFF066 /* Base */; };
+		274ED35D2C2D7DA000EFF066 /* DefaultPhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED35C2C2D7DA000EFF066 /* DefaultPhotosRepository.swift */; };
+		274ED35F2C2D7DF800EFF066 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED35E2C2D7DF800EFF066 /* NetworkService.swift */; };
+		274ED3642C2D7E3F00EFF066 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED3632C2D7E3F00EFF066 /* Photo.swift */; };
+		274ED3662C2D7E5500EFF066 /* FetchPhotosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED3652C2D7E5500EFF066 /* FetchPhotosUseCase.swift */; };
+		274ED3692C2D7E7800EFF066 /* PhotosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274ED3682C2D7E7800EFF066 /* PhotosRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		274ED3472C2D592A00EFF066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274ED34A2C2D592A00EFF066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274ED34C2C2D592A00EFF066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		274ED35C2C2D7DA000EFF066 /* DefaultPhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPhotosRepository.swift; sourceTree = "<group>"; };
+		274ED35E2C2D7DF800EFF066 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		274ED3632C2D7E3F00EFF066 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		274ED3652C2D7E5500EFF066 /* FetchPhotosUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhotosUseCase.swift; sourceTree = "<group>"; };
+		274ED3682C2D7E7800EFF066 /* PhotosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,107 @@
 		274ED33D2C2D592800EFF066 /* Unsplash_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				274ED3522C2D7A9500EFF066 /* Application */,
+				274ED3542C2D7AF600EFF066 /* Presentation */,
+				274ED3562C2D7C0300EFF066 /* Domain */,
+				274ED3582C2D7C2000EFF066 /* Data */,
+				274ED3592C2D7CB500EFF066 /* Infrastructure */,
+				274ED3532C2D7AB900EFF066 /* Resources */,
+			);
+			path = Unsplash_Clone;
+			sourceTree = "<group>";
+		};
+		274ED3522C2D7A9500EFF066 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				274ED33E2C2D592800EFF066 /* AppDelegate.swift */,
 				274ED3402C2D592800EFF066 /* SceneDelegate.swift */,
-				274ED3422C2D592800EFF066 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		274ED3532C2D7AB900EFF066 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				274ED3472C2D592A00EFF066 /* Assets.xcassets */,
 				274ED3492C2D592A00EFF066 /* LaunchScreen.storyboard */,
 				274ED34C2C2D592A00EFF066 /* Info.plist */,
 			);
-			path = Unsplash_Clone;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		274ED3542C2D7AF600EFF066 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3422C2D592800EFF066 /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		274ED3562C2D7C0300EFF066 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3602C2D7E0000EFF066 /* Entities */,
+				274ED3612C2D7E1100EFF066 /* UseCases */,
+				274ED3622C2D7E1E00EFF066 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		274ED3582C2D7C2000EFF066 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				274ED35C2C2D7DA000EFF066 /* DefaultPhotosRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		274ED3592C2D7CB500EFF066 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				274ED35A2C2D7CD200EFF066 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		274ED35A2C2D7CD200EFF066 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				274ED35E2C2D7DF800EFF066 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		274ED3602C2D7E0000EFF066 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3632C2D7E3F00EFF066 /* Photo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		274ED3612C2D7E1100EFF066 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3652C2D7E5500EFF066 /* FetchPhotosUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		274ED3622C2D7E1E00EFF066 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3672C2D7E6700EFF066 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		274ED3672C2D7E6700EFF066 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				274ED3682C2D7E7800EFF066 /* PhotosRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274ED3642C2D7E3F00EFF066 /* Photo.swift in Sources */,
+				274ED35F2C2D7DF800EFF066 /* NetworkService.swift in Sources */,
 				274ED3432C2D592800EFF066 /* ViewController.swift in Sources */,
 				274ED33F2C2D592800EFF066 /* AppDelegate.swift in Sources */,
+				274ED35D2C2D7DA000EFF066 /* DefaultPhotosRepository.swift in Sources */,
 				274ED3412C2D592800EFF066 /* SceneDelegate.swift in Sources */,
+				274ED3692C2D7E7800EFF066 /* PhotosRepository.swift in Sources */,
+				274ED3662C2D7E5500EFF066 /* FetchPhotosUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unsplash_Clone/Info.plist;
+				INFOPLIST_FILE = Unsplash_Clone/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -307,7 +415,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Unsplash_Clone/Info.plist;
+				INFOPLIST_FILE = Unsplash_Clone/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
